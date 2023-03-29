@@ -12,12 +12,15 @@ const Foods = () => {
         <div className='foods-container'>
             <div className='food-container'>
                 {
-                    foods.map(food => <Food></Food>)
+                    foods.map(food => <Food
+                        key={food.idCategory}
+                        food={food}
+                    ></Food>)
                 }
             </div>
 
             <div className='cart-container'>
-                <h1>food summary</h1>
+                <h3>food summary</h3>
             </div>
         </div>
     );
