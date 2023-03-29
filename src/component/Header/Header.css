@@ -1,0 +1,28 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cadetblue;
+    padding: 15px;
+}
+
+.header-logo {
+    color: white;
+    font-size: 2em;
+    margin: 0px;
+}
+
+.author-logo {
+    color: orangered;
+}
+
+.header-container nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+
+}
+
+.header-container nav a:hover {
+    color: orangered;
+}
