@@ -1,12 +1,13 @@
 .cart {
-    background-color: rgba(225, 134, 69, 0.727);
-    text-align: center;
-    position: sticky;
-    top: 0px;
-    height: 100vh;
+    display: flex;
+    background-color: white;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.cart h3 {
-    margin-top: 0px;
-    padding: 10px;
+.cart img {
+    height: 70px;
+    width: 70px;
 }

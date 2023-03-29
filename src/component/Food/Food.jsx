@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Food = (props) => {
-    console.log(props.food)
+    const { strCategory, strCategoryThumb, strCategoryDescription } = props.food;
 
-    const { strCategory, strCategoryThumb, strCategoryDescription } = props.food
+    const addedToCart = props.addedToCart
     return (
         <div className='food'>
             <img src={strCategoryThumb} alt="" />
@@ -14,8 +14,7 @@ const Food = (props) => {
                 <h3>{strCategory}</h3>
                 <p>{strCategoryDescription.slice(1, 100)}</p>
             </div>
-            <button >Add to cart <span> <FontAwesomeIcon icon={faShoppingCart} /></span></button>
-
+            <button onClick={() => addedToCart(props.food)}>Add to cart <span> <FontAwesomeIcon icon={faShoppingCart} /></span></button>
         </div>
     );
 };

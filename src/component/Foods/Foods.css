@@ -10,3 +10,16 @@
     margin: 50px;
     position: relative;
 }
+
+.cart-container {
+    background-color: rgba(225, 134, 69, 0.727);
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+}
+
+.cart-container h3 {
+    margin-top: 0px;
+    padding: 10px;
+    text-align: center;
+}
