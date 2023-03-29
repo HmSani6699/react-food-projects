@@ -1,0 +1,12 @@
+.cart {
+    background-color: rgba(225, 134, 69, 0.727);
+    text-align: center;
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+}
+
+.cart h3 {
+    margin-top: 0px;
+    padding: 10px;
+}

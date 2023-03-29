@@ -1,10 +1,32 @@
 .food {
     border: 2px solid rgb(170, 169, 169);
-    padding: 10px;
     border-radius: 10px;
+    position: relative;
+    height: 420px;
+}
+
+.food-body {
+    padding: 10px;
 }
 
 .food img {
     width: 100%;
-    border-radius: 10px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.food button {
+    background-color: rgba(255, 130, 84, 0.849);
+    width: 100%;
+    border-radius: 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    border: 1px solid rgb(170, 169, 169);
+    position: absolute;
+    bottom: 0px;
+}
+
+.food button:hover {
+    background-color: rgba(255, 68, 0, 0.937);
 }

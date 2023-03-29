@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Food from '../Food/Food';
-import './Foods.css'
+import './Foods.css';
 const Foods = () => {
     const [foods, setFoods] = useState([]);
     useEffect(() => {
@@ -20,7 +21,7 @@ const Foods = () => {
             </div>
 
             <div className='cart-container'>
-                <h3>food summary</h3>
+                <Cart></Cart>
             </div>
         </div>
     );
