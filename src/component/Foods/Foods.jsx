@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import Food from '../Food/Food';
 import './Foods.css';
 import swal from 'sweetalert';
-import { addToDb, getCartInLocalStorage } from '../Utility/Utilitu';
+import { addToDb, getCartInLocalStorage, remove } from '../Utility/Utilitu';
 
 const Foods = () => {
     const [foods, setFoods] = useState([]);
@@ -30,6 +30,12 @@ const Foods = () => {
         addToDb(food.strCategory)
     }
 
+
+    const deleteCart = (name) => {
+        remove(name)
+        location.reload()
+    }
+
     useEffect(() => {
         const getCarts = getCartInLocalStorage();
         let storProduct = [];
@@ -42,7 +48,7 @@ const Foods = () => {
             }
         }
         setCart(storProduct)
-    }, [foods])
+    }, [foods]);
 
     return (
         <div className='foods-container'>
@@ -63,6 +69,7 @@ const Foods = () => {
                         carts.map(cart => <Cart
                             cart={cart}
                             key={cart.idCategory}
+                            deleteCart={deleteCart}
                         ></Cart>)
                     }
                 </div>

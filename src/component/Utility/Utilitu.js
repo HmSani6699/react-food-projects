@@ -11,6 +11,15 @@ const addToDb = (id) => {
     localStorage.setItem('carts-stored', JSON.stringify(storedCart))
 
 }
+const deleteCartToLocalStorage = (name) => {
+    const storedCart = getCartInLocalStorage();
+    for (const cartName in storedCart) {
+        if (cartName === name) {
+            delete storedCart[name];
+            localStorage.setItem('carts-stored', JSON.stringify(storedCart))
+        }
+    }
+}
 
 
 const getCartInLocalStorage = () => {
@@ -27,5 +36,6 @@ const getCartInLocalStorage = () => {
 
 export {
     addToDb,
+    deleteCartToLocalStorage as remove,
     getCartInLocalStorage
 }
