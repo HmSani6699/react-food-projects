@@ -33,7 +33,9 @@ const Foods = () => {
 
     const deleteCart = (name) => {
         remove(name)
-        location.reload()
+        // location.reload()
+        const getCart = carts.filter(cart => cart.strCategory !== name);
+        setCart(getCart)
     }
 
     useEffect(() => {
