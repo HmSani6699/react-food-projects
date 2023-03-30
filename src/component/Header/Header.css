@@ -26,3 +26,19 @@
 .header-container nav a:hover {
     color: orangered;
 }
+
+.author-menu {
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    .header-container {
+        display: none;
+    }
+
+    .author-menu {
+        display: block;
+        background-color: cadetblue;
+        padding: 15px;
+    }
+}
